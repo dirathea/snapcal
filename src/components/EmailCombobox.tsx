@@ -55,7 +55,12 @@ export function EmailCombobox({
         <ComboboxEmpty>No saved emails yet</ComboboxEmpty>
         <ComboboxList>
           {(email) => (
-            <ComboboxItem key={email} value={email}>
+            <ComboboxItem
+              key={email}
+              value={email}
+              onClick={() => onChange(email)}
+              className="cursor-pointer"
+            >
               <div className="flex items-center justify-between w-full gap-2">
                 <span className="flex-1 truncate">{email}</span>
                 <Button
